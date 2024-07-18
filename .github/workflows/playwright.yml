@@ -25,3 +25,11 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+  super-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Super-Linter
+        uses: super-linter/super-linter@v3.17.0
